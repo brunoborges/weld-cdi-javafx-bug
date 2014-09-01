@@ -1,4 +1,4 @@
-package com.oracle.samples.weldcdijavafxbug;
+package weldcdijavafxbug;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
