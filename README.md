@@ -1,0 +1,2 @@
+weld-cdi-javafx-bug
+===================
