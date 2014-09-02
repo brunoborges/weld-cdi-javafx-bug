@@ -28,7 +28,10 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmll = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"), null);
-        fxmll.setControllerFactory((clazz) -> container.instance().select(clazz).get());
+        fxmll.setControllerFactory((clazz) -> {
+            System.out.println("CDI Controller Factory being called... (called only once!) ");
+            return container.instance().select(clazz).get();
+        });
         Parent root = fxmll.load();
 
         Scene scene = new Scene(root);

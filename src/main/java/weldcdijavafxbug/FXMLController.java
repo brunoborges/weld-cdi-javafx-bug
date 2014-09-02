@@ -14,6 +14,7 @@ public class FXMLController implements Initializable {
 
     public FXMLController() {
         System.out.println("This constructur will be called twice! See output");
+        System.out.println("Thread: " + Thread.currentThread().hashCode() + " " + Thread.currentThread().getName());
         new Exception("STACKTRACE OUTPUT").printStackTrace();
     }
 
